@@ -9,13 +9,14 @@ const WeatherApp = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
   const [loading, setLoading] = useState(false);
-  const api_key = import.meta.env.VITE_WEATHER_API_KEY;
+  // const api_key = import.meta.env.VITE_WEATHER_API_KEY;
 
-  const fetchWeather = async (location) => {
+  const fetchWeather = async (city) => {
     try {
       setLoading(true);
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=Metric&APPID=${api_key}`;
-      const res = await fetch(url);
+      // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=Metric&APPID=${api_key}`;
+      // const res = await fetch(url);
+      const res = await fetch(`/.netlify/functions/fetchWeather?city=${city}`);
       const weatherData = await res.json();
 
       if (weatherData.cod !== 200) {
