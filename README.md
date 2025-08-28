@@ -13,5 +13,7 @@
   - humidity
   - wind
 
-<img src="./weather-app-sunny.png" width="50%">
-<img src="./weather-app-cloudy.png" width="50%">
+<p>
+ <img src="./public/images/weather-app-sunny.png" width="200" style="margin-right: 10px;">
+ <img src="./public/images/weather-app-cloudy.png" width="200">
+</p>
